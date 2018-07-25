@@ -1,0 +1,9 @@
+debug.debug_page:
+  path: '/debug'
+  defaults:
+    _controller: '\Drupal\debug\Controller\DebugController::debugPage'
+    _title: 'Debug'
+  options:
+    no_cache: TRUE
+  requirements:
+    _access: 'TRUE'

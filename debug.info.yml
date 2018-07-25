@@ -1,0 +1,6 @@
+name: Debug
+type: module
+description: 'Module for debugging purpose.'
+package: Custom
+version: VERSION
+core: 8.x

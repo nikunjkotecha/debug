@@ -1,0 +1,45 @@
+<?php
+/**
+ * @file
+ * Module file for debug.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function debug_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == '') {
+    ndebug(123);
+
+
+  }
+}
+
+function ndebug($value, $die = TRUE) {
+  print '<pre>';
+  print_r($value);
+  print '</pre>';
+  print PHP_EOL;
+
+  if ($die) {
+    die();
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function debug_preprocess_node(&$variables) {
+
+
+
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function debug_theme_registry_alter(array &$theme_registry) {
+  $theme_registry;
+}
