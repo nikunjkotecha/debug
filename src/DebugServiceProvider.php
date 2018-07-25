@@ -16,11 +16,11 @@ class DebugServiceProvider extends ServiceProviderBase implements ServiceModifie
    */
   public function alter(ContainerBuilder $container) {
     try {
-//      $twig_config = $container->getParameter('twig.config');
-//      $twig_config['debug'] = TRUE;
-//      $twig_config['auto_reload'] = TRUE;
-//      $twig_config['cache'] = FALSE;
-//      $container->setParameter('twig.config', $twig_config);
+      $twig_config = $container->getParameter('twig.config');
+      $twig_config['debug'] = TRUE;
+      $twig_config['auto_reload'] = TRUE;
+      $twig_config['cache'] = FALSE;
+      $container->setParameter('twig.config', $twig_config);
 
       // This is required for local to keep working smoothly.
       $container->setParameter('http.response.debug_cacheability_headers', FALSE);
